@@ -1,0 +1,19 @@
+{% macro render_field(field) %}
+  <dt>
+  <dd>You could search Name of Living People in Wiki </dd>
+  <dd>Here are some demos: 
+	<li><a href="./people/barack%20obama">Barack Obama</a></li>
+	<li><a href="./people/stephen%20hawking">Stephen Hawking</a></li>
+	<li><a href="./people/tiger%20woods">Tiger Woods</a></li>
+	<li><a href="./people/j.%20k.%20rowling">J. K. Rowling</a></li>
+  </dd>
+  <dd>{{ field(**kwargs)|safe }}
+  {% if field.errors %}
+    <ul class=errors>
+    {% for error in field.errors %}
+      <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  </dd>
+{% endmacro %}

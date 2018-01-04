@@ -1,0 +1,37 @@
+name: xyang105_app
+channels:
+- anaconda-fusion
+- defaults
+dependencies:
+- certifi=2017.11.5=py35h456c6ae_0
+- click=6.7=py35h10df73f_0
+- flask=0.12.2=py35he898f9a_0
+- flask-cors=3.0.3=py35h5700fb0_0
+- flask-login=0.4.0=py35_0
+- flask-socketio=2.9.2=py35h2b1273d_0
+- flask-wtf=0.14.2=py35_0
+- icc_rt=2017.0.4=h97af966_0
+- intel-openmp=2018.0.0=hd92c6cd_8
+- itsdangerous=0.24=py35h99d45d4_1
+- jinja2=2.10=py35hdf652bb_0
+- markupsafe=1.0=py35hc253e08_1
+- mkl=2018.0.1=h2108138_4
+- numpy=1.13.3=py35hb7e80fb_0
+- pandas=0.21.1=py35h047fa9f_0
+- pip=9.0.1=py35h691316f_4
+- python=3.5.4=h1357f44_23
+- python-dateutil=2.6.1=py35h6b299a3_1
+- python-engineio=2.0.1=py35h5556411_0
+- python-socketio=1.8.3=py35h357cad3_0
+- pytz=2017.3=py35hb294b1a_0
+- setuptools=36.5.0=py35h21a22e4_0
+- six=1.11.0=py35hc1da2df_1
+- vc=14=h2379b0c_2
+- vs2015_runtime=14.0.25123=hd4c4e62_2
+- werkzeug=0.12.2=py35hc854123_0
+- wheel=0.30.0=py35h38a90bc_1
+- wincertstore=0.2=py35hfebbdb8_0
+- wtforms=2.1=py35_0
+- pip:
+  - metapy==0.2.9
+

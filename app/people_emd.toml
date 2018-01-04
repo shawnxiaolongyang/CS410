@@ -1,0 +1,36 @@
+stop-words = "../word_embedding/meta/data/lemur-stopwords.txt"
+libsvm-modules = "../word_embedding/meta/deps/libsvm-modules/"
+prefix = "../word_embedding/meta/data/"
+punctuation = "../word_embedding/meta/data/sentence-boundaries/sentence-punctuation.txt"
+start-exceptions = "../word_embedding/meta/data/sentence-boundaries/sentence-start-exceptions.txt"
+end-exceptions = "../word_embedding/meta/data/sentence-boundaries/sentence-end-exceptions.txt"
+
+dataset = "data"
+corpus = "line.toml" # located inside dataset folder
+index = "people-idx"
+indexer-ram-budget = 24000 # **estimated** RAM budget for indexing in MB
+                          # always set this lower than your physical RAM!
+# indexer-num-threads = 8 # default value is system thread concurrency
+
+[[analyzers]]
+method = "ngram-word"
+ngram = 1
+filter = "default-unigram-chain"
+
+[embeddings]
+prefix = "word-embeddings"
+filter = [{type = "icu-tokenizer", suppress-tags = true}, {type = "lowercase"}]
+vector-size = 50
+window-size = 15
+max-ram = 24000
+merge-fanout = 8
+num-threads = 8
+max-iter = 100
+learning-rate = 0.05
+xmax = 100.0
+scale = 0.75
+unk-num-avg = 100
+
+[embeddings.vocab]
+min-count = 10
+max-size = 500000

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<title>Word distribution of Topic in Wiki</title>
+<h1>You are looking at the words distribution of the topic <font color="blue">{{topics}}</font></h1>
+<div> {% for word, frequency in word_distribution %}
+  			 <li>{{word}} : {{frequency}}</li>
+  			{% endfor %}
+  </div>
+  
+  <h1>Back to the<a href={{"../"}}> search page</a> </h1>

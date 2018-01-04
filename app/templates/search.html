@@ -1,0 +1,9 @@
+{% from "_formhelpers.html" import render_field %}
+<div align="center">
+<form method=post>
+  <dl>
+    {{ render_field(form.username) }}
+  </dl>
+  <p><input type=submit value=Search>
+</form>
+</div>

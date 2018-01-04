@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Knowledge graph of People in Wiki</title>
+{% if name %}
+  <h1>You are searching <font color="blue">{{ name }}</font></h1>
+  <h3>The recommend tags for <font color="blue">{{ name }}</font> are:</h3>
+  <h3>(You could click on the topic below to see the words distribution in the topic)</h3>
+  <div><a href={{"../topic/"+topics}}>{{ topics }}</a></div>
+  <h3>Here is the bios of <font color="blue">{{ name }}</font></h3>
+  <div>{{ bios }}</div>
+  </br</br>
+  <h3>The embedding algorithm recommend  following words for the <font color="blue">{{ name }}</font>: </h3>
+  <h3>(You could click on words below to see related words)</h3>
+  <div> {% for i in embedding %}
+  			<a href={{"./"+i}}> {{i}}</a>
+  			{% endfor %}
+  </div>
+   
+{% else %}
+  <h1>You are searching <font color="blue">{{ word }}</font></h1>
+  <h3>The name you search not exist in Wiki!</h3>
+  <h3>The embedding algorithm recommend following words for the <font color="blue">{{ word }}</font>: </h3>
+  <h3>(You could click on words below to see related words)</h3>
+  <div> {% for i in embedding %}
+  			<a href={{"./"+i}}> {{i}}</a>
+  			{% endfor %}
+  </div>
+{% endif %}
+
+<h1>Back to the<a href={{"../"}}> search page</a> </h1>
